@@ -38,6 +38,7 @@ body {
 
 #player::placeholder {
   color: var(--text-color);
+  opacity: .7;
 }
 
 #btn,
@@ -66,7 +67,6 @@ p{
   width: 40px;
   height: 40px;
   color: var(--shadow-color);
-  padding: 5.6px;
   background-color: var(--accent-color);
   cursor: pointer;
   transition: .5s;

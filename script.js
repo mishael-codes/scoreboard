@@ -16,11 +16,12 @@ function displayPlayers() {
     players += `  <div class="player"></div>
                   <div class="input-controller d-flex mt-4">
                     <p class="me-5">${playersArray[i]}</p>
-                    <p class="playerPoints">5</p>
-                    <i class="fa-solid fa-plus fa-2x increment rounded-3"></i>
+                    <p class="playerPoints"></p>
+                    <button class="fa-solid fa-plus fa-2x increment rounded-3"></button>
                   </div>`;
-  } 
+  }
   document.querySelector(".player-list").innerHTML = players;
+  activateIncrementCounter();
 }
 
 function createPlayer(player) {
@@ -42,10 +43,20 @@ window.onload = function () {
   displayPlayers();
 };
 
-
 // to clear the local storage
 let clearBtn = document.querySelector("#clear");
-clearBtn.addEventListener('click', () => {
+clearBtn.addEventListener("click", () => {
   localStorage.clear();
   location.reload();
-})
+});
+
+function activateIncrementCounter() {
+  let incrementBtn = document.querySelectorAll(".increment");
+  let playerPoints = document.querySelectorAll(".playerPoints");
+  incrementBtn.forEach((ib, i) => {
+    let point = 0;
+    ib.addEventListener("click", () => {
+      playerPoints[i].textContent = point += 5;
+    });
+  });
+}
