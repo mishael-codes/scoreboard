@@ -21,7 +21,7 @@ function displayPlayers() {
                   </div>`;
   }
   document.querySelector(".player-list").innerHTML = players;
-  activateIncrementCounter();
+  addFive()
 }
 
 function createPlayer(player) {
@@ -50,13 +50,34 @@ clearBtn.addEventListener("click", () => {
   location.reload();
 });
 
-function activateIncrementCounter() {
+let pointsArray = []
+
+/* function activateIncrementCounter() {
   let incrementBtn = document.querySelectorAll(".increment");
   let playerPoints = document.querySelectorAll(".playerPoints");
   incrementBtn.forEach((ib, i) => {
     let point = 0;
     ib.addEventListener("click", () => {
       playerPoints[i].textContent = point += 5;
+      // pointsArray.push(parseInt(playerPoints[i].textContent));
+      // console.log(pointsArray);
     });
   });
+} */
+
+
+
+localStorage.getItem("points")
+
+function addFive(){
+   let addBtn = document.querySelectorAll(".increment")
+   let pp = document.querySelectorAll(".playerPoints")
+  addBtn.forEach((ab, i) => {
+    let points = 0
+    ab.addEventListener('click', () => {
+      let fofo = pp[i].textContent = points += 5
+      console.log(fofo)
+      localStorage.setItem("points", fofo)
+    })
+  })
 }
