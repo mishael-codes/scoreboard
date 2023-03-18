@@ -19,7 +19,8 @@ body {
   background-color: var(--bg-color);
 }
 
-#btn {
+#btn,
+#clear {
   width: 100px;
   font-weight: 600;
   color: var(--bg-color);
@@ -28,39 +29,68 @@ body {
   transition: .7s;
 }
 
-#player-input {
+#player {
   width: 220px;
   caret-color: var(--accent-color);
   color: var(--text-color);
   background-color: var(--shadow-color);
 }
 
-#player-input::placeholder {
+#player::placeholder {
   color: var(--text-color);
 }
 
 #btn,
-#player-input {
+#clear,
+#player {
   height: 45px;
   border: 0;
   outline: 0;
 }
 
 #btn:active,
-#player-input:active {
+#player:active {
   border: 0;
   outline: 0;
 }
 
+p{
+  /* background-color: red; */
+  width: 75px;
+  color: var(--text-color);
+  height: 40px;
+  font-size: 1.5rem;
+}
+
+.increment{
+  width: 40px;
+  height: 40px;
+  color: var(--shadow-color);
+  padding: 5.6px;
+  background-color: var(--accent-color);
+  cursor: pointer;
+  transition: .5s;
+}
+
+#clear{
+  width: 100%;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
 @media screen and (min-width: 1024px) {
-  #btn:hover {
+  #btn:hover,
+  #clear:hover,
+  .increment:hover {
     color: var(--text-color);
     background-color: var(--shadow-color);
     box-shadow: inset -5px -5px 4px var(--accent-color);
   }
 
-  #btn:active {
+  #btn:active,
+  #clear:active,
+  .increment:active {
     transform: translateY(5px);
-    transform: 2s;
+    transform: .5s;
   }
 }
