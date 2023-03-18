@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An effective way of keeping track of scores during game night. Adding new names and points to those names. It was inspired by a game night held on whatsapp for a lovely group of friends."
+    />
+    <meta
+      name="keywords"
+      content="game night, gamenight, game-night, scores, track, track scores, an app to track, an app to track scores, a site to track, a site to track scores, a site to keep, a site to keep scores"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>ScoreBoard</title>
+  </head>
+  <body>
+    <main>
+      <div class="input-header">
+        <h1>ScoreBoard</h1>
+        <h3>
+          <time id="date"></time>
+        </h3>
+      </div>
+      <div class="input-header">
+        <input
+          type="text"
+          id="player-input"
+          placeholder="Enter new player..."
+        />
+        <button>Add Player</button>
+      </div>
+      <div class="player-list"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
