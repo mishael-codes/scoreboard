@@ -1,0 +1,66 @@
+:root {
+  --bg-color: hsl(28, 41%, 7%);
+  --shadow-color: hsl(20, 29%, 18%);
+  --accent-color: hsl(52, 37%, 74%);
+  --text-color: hsl(60, 33%, 85%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+#btn {
+  width: 100px;
+  font-weight: 600;
+  color: var(--bg-color);
+  background-color: var(--accent-color);
+  box-shadow: inset -5px -5px 4px var(--shadow-color);
+  transition: .7s;
+}
+
+#player-input {
+  width: 220px;
+  caret-color: var(--accent-color);
+  color: var(--text-color);
+  background-color: var(--shadow-color);
+}
+
+#player-input::placeholder {
+  color: var(--text-color);
+}
+
+#btn,
+#player-input {
+  height: 45px;
+  border: 0;
+  outline: 0;
+}
+
+#btn:active,
+#player-input:active {
+  border: 0;
+  outline: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  #btn:hover {
+    color: var(--text-color);
+    background-color: var(--shadow-color);
+    box-shadow: inset -5px -5px 4px var(--accent-color);
+  }
+
+  #btn:active {
+    transform: translateY(5px);
+    transform: 2s;
+  }
+}
